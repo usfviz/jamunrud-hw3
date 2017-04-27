@@ -2,6 +2,15 @@ dependencies <- c('shiny', 'ggplot2', 'dplyr', 'ggvis', 'tidyr', 'pairsD3', 'res
 new.packages <- dependencies[!(dependencies %in% installed.packages()[,"Package"])]
 if(length(new.packages)>0) {install.packages(new.packages, repos="http://cran.rstudio.com/")}
 
+library('shiny')
+library('ggplot2')
+library('dplyr')
+library('ggvis')
+library('tidyr')
+library('pairsD3')
+library('reshape2')
+
+
 fb_raw <- read.table('dataset_Facebook.csv', header = TRUE, sep = ";")
 fb_raw$id <- 1:nrow(fb_raw)
 
